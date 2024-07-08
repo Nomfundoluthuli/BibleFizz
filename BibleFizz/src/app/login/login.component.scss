@@ -1,0 +1,29 @@
+input{
+
+    border-radius: 50px;
+    background-color: rgb(243, 243, 243);
+    margin: 15px;
+  }
+  button{
+    background-color:  rgb(136, 194, 136);
+    align-self: center;
+  }
+  .form-label {
+    font-size: 0.875rem; /* Adjust label font size */
+    font-weight: bold; /* Make labels bold */
+  }
+  .form-control {
+    padding: 0.37rem 0.7rem; /* Adjust padding to make inputs shorter */
+    font-size: 0.875rem; /* Adjust input font size */
+  }
+.container{
+    margin-top: 200px;
+}
+h1{
+  align-self: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.mb-3 image{
+  width: 100px;
+  height: 100px;
+}
