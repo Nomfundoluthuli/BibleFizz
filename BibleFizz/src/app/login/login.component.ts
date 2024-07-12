@@ -7,6 +7,8 @@ import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/fo
   styleUrls: ['./login.component.scss']
 })
 export class loginComponent {
+loginSuccess: any;
+loginFailed: any;
 xyz() {
 throw new Error('Method not implemented.');
 }

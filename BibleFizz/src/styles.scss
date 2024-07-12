@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+button{
+    background-color: azure;
+    border-radius: 20px;
+}
+html,body{
+    height:100%;
+    margin: 0 ;
+    padding:0;
+    
+}
+.highlight {
+    background-color: yellow; /* or any other color */
+}
+body {
+    background-color: white;
+}
+
+.active {
+    background-color: rgb(211, 155, 35);
+}

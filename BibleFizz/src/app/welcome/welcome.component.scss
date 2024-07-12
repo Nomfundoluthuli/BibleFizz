@@ -1,0 +1,10 @@
+.logo{
+     
+    align-self: flex-start; /* Aligns the image to the top of the card */
+    width: 20%; /* Ensures the image fills the width of the card */
+    object-fit: cover; /* Maintains aspect ratio and covers the entire card */
+    align-self: center;
+    margin-top: 60px;
+    margin-left: 0px;
+    border-radius: 30px;
+  }

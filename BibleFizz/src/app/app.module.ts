@@ -1,5 +1,6 @@
 import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -7,18 +8,17 @@ import { LandingComponent } from './landing/landing.component';
 import { XyzComponent } from './navbar/xyz.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { loginComponent } from './login/login.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
 import { Routes } from '@angular/router';
-import { ServiceComponent } from './service/service.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+import { BibleComponent } from './bible/bible/bible.component';
 // import { AuthserviceComponent } from './service/authservice/authservice.component';
 // import { AuthServiceComponent } from './landing/pages/services/auth.service/auth.service.component';
 // import { GuardsComponent } from './authguards/guards/guards.component';
 // import { AuthServicesComponent } from './services/auth.services/auth.services.component';
 
-const routes: Routes = [
-  { path: 'signup', component: SignupComponent }
-];
+ 
 
 
 @NgModule({
@@ -28,15 +28,15 @@ const routes: Routes = [
     XyzComponent,
     loginComponent,
     SignupComponent,
-    ServiceComponent,
-    // AuthserviceComponent,
-    // AuthServiceComponent,
-    // GuardsComponent,
-    // AuthServicesComponent,
+    WelcomeComponent,
+    BibleComponent,
+
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable

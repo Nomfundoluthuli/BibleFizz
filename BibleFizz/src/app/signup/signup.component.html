@@ -1,44 +1,66 @@
-<div class="content">
-  
-    <form >
-    <div class="card" style="width: 27rem;">
-     
-        <h3 class="card-head">Sign Up</h3>
-    
-      <div class="card-body">
-        <div class="form-group">
-          <label for="exampleInputEmail1">Name</label>
-          <input type="text" class="form-control" id="exampleInputName"  formControlName="name" placeholder="Enter name">
-         <br>
+<div class="flex flex-col justify-center items-center nn">
+  <div class=" rounded px-8 pt-6 pb-8 mb-4 md:max-w-md w-full">
+    <!-- Logo -->
+    <div class="flex justify-center mb-6 nn">
+      <img src="/assets/Yellow White Black Lineart Elegant Woman Portrait Jewelry Logo.png" alt="Logo" class="logo">
+    </div>
+
+    <h1 class="text-center text-2xl font-bold mb-6">Sign Up</h1>
+
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="w-full ">
+      <div class="mb-1" >
+        <div class="relative">
+        <input type="email" id="email" name="email" formControlName="email" placeholder="Email"
+               class=" border-30  w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+               [ngClass]="{'border-red-500': signupForm.get('email')?.invalid && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched), 'border-green-500': signupForm.get('email')?.valid}">
+        <div *ngIf="signupForm.get('email')?.invalid && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched)" class="text-red-500 text-xs mt-1">
+          <div *ngIf="signupForm.get('email')?.errors?.['required']">Email is required.</div>
+          <div *ngIf="signupForm.get('email')?.errors?.['email']">Invalid email format.</div>
         </div>
-        <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="text" class="form-control" id="exampleInputEmail1"  formControlName="email" placeholder="Enter email">
-          <small *ngIf = "signupForm.get('email')?.errors&&signupForm.get('email')?.touched" class="comment">Email Invalid</small>
-   
-        
-          <br>
-        
-        </div>
-        <div class="form-group">
-          <label for="inputPassword">Password</label>
-          <input type="password" class="form-control" id="inputPassword"  formControlName="password" placeholder="password">
-          <small class="comment" *ngIf="signupForm.get('password')?.value.length<8&&signupForm.get('password')?.touched"> Password too short, min 5 characters</small>
-       
-        </div>
-        <br>
-        <div class="form-group">
-          <label for="inputPassword">Confirm Password</label>
-          <input type="password" class="form-control" id="inputPasswordConfirm"  formControlName="confirmPassword" placeholder="confirmPassword">
-        </div>
-       
-        <br>
-        <div class="d-grid gap-2">
-        </div>
-        <small class="form-text text-muted">Already a member? <a routerLink="/login">Login</a></small>
-      
       </div>
-    </div>
-     
-    </form>
-    </div>
+      </div>
+
+      <div class="mb-1">
+        <div class="relative"> 
+          <input type="password" id="password" name="password" formControlName="password" placeholder="Password"
+                 class="border-30 w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline field"
+                 [ngClass]="{'border-red-500': signupForm.get('password')?.invalid && (signupForm.get('password')?.dirty || signupForm.get('password')?.touched), 'border-green-500': signupForm.get('password')?.valid}">
+          <span (click)="togglePasswordVisibility('password')" class="absolute inset-y-0 right-0 flex items-center pr-1 cursor-pointer">
+            <i class="fa fa-eye text-gray-400 hover:text-gray-600"></i>
+          </span>
+        </div>
+        <div *ngIf="signupForm.get('password')?.invalid && (signupForm.get('password')?.dirty || signupForm.get('password')?.touched)" class="text-red-500 text-xs mt-1">
+          Password must be 5 characters, contain only letters, numbers, and special character.
+         </div>
+      </div>
+
+      <div class="mb-1">
+        <div class="relative">
+          <input type="password" id="confirmPassword" name="confirmPassword" formControlName="confirmPassword" placeholder="ConfirmPassword"
+                 class=" font-bold py-3 px-4  focus:outline-none focus:shadow-outline w-full md:w-auto mb-2 md:mb-0"
+                 [ngClass]="{'border-red-500': (signupForm.get('confirmPassword')?.invalid || passwordMatchError) && (signupForm.get('confirmPassword')?.dirty || signupForm.get('confirmPassword')?.touched), 'border-green-500': !passwordMatchError && signupForm.get('confirmPassword')?.valid}">
+          <span (click)="togglePasswordVisibility('confirmPassword')" class="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer">
+            <i class="fa fa-eye text-red-400 hover:text-gray-600"></i>
+          </span>
+        </div>
+        <div *ngIf="(signupForm.get('confirmPassword')?.invalid || passwordMatchError) && (signupForm.get('confirmPassword')?.dirty || signupForm.get('confirmPassword')?.touched)" class="text-red-500 text-xs mt-1">
+          Passwords do not match.
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+      <div class="flex items-center justify-between alll">
+        <button type="submit" [disabled]="!signupForm.valid"
+                class="bg-[#F99104] hover:bg-[#EF5513] text-white text-white font-bold py-3 px-8  focus:outline-none focus:shadow-outline" routerLink="/welcome">
+                SIGNUP
+        </button>
+      </div>
+      <a href="#" class="inline-block align-baseline font-bold text-sm text-black hover:text-black mt-4">
+        Already registered?
+      </a>
+      <a class="inline-block align-baseline font-bold text-sm text-[#F99104] hover:text-[#EF5513] mt-1" routerLink="/signin">
+        Sign In
+      </a>
+      </div>    
+    
+

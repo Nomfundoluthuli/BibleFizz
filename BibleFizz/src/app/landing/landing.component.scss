@@ -6,10 +6,10 @@
   
   .card-img-top {
     align-self: flex-start; /* Aligns the image to the top of the card */
-    width: 50%; /* Ensures the image fills the width of the card */
+    width: 30%; /* Ensures the image fills the width of the card */
     object-fit: cover; /* Maintains aspect ratio and covers the entire card */
-    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0; /* Optional: Adds rounded corners to the top */
     align-self: center;
+    padding-top: 60px;
   }
   
   .card {
@@ -46,15 +46,20 @@
   .card-title {
     align-self: center; /* Removes default margin for card title */
     height: 10px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
+    font-family:cursive;
+    font-size: xx-large;
+  }  
   
   .card-text {
-    flex: 1; /* Allows the text to take up remaining space in the card body */
+    flex: 6; /* Allows the text to take up remaining space in the card body */
     align-self: center;/* Removes default margin for paragraph */
+    padding-top: 40px;
   }
   
   .btn {
     align-self: center; /* Aligns the button to the start of the card */
-    background-color: rgb(136, 194, 136);
+    background-color: #c4e8a7;
+    border-radius: 30px;
+    margin-top: 3rem;
+   
   }
