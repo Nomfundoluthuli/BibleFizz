@@ -9,13 +9,15 @@ html,body{
     padding:0;
     
 }
-.highlight {
-    background-color: yellow; /* or any other color */
-}
+
 body {
     background-color: white;
 }
+.hover {
+    color: #555; /* Darker text color on hover */
+    text-decoration: none; /* Remove underline on hover */
+  }
 
-.active {
-    background-color: rgb(211, 155, 35);
-}
+  
+
+

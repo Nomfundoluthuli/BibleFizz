@@ -1,18 +1,21 @@
-<div class="max-w-3xl mx-auto px-4 py-8">
-    <p class="text-2xl font-bold text-center text-gray-800 mb-8">Bible Text</p>
-  
-    <!-- Display loading message while data is being fetched -->
-    <div *ngIf="!bible" class="text-lg text-gray-800 text-center">
-      Loading Bible data...
-    </div>
-  
-    <!-- Display Bible data once fetched -->
-    <div *ngIf="bible">
-      <div *ngFor="let chapter of bible.chapters" class="mb-8">
-        <h2 class="text-xl font-semibold text-gray-900 mb-4">Ruth {{ chapter.chapter }}</h2>
-        <div *ngFor="let verse of chapter.verses" class="mb-2">
-          <p class="text-lg text-gray-800"><strong>{{ verse.verse }}:</strong> {{ verse.text }}</p>
-        </div>
-      </div>
-    </div>
+<app-xyz></app-xyz>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Image Example</title>
+  <link rel="stylesheet" href="/assets/Beige and Green Illustrated Floral Quote Desktop Wallpaper.png">
+</head>
+<body>
+  <div class="container">
+      <h1>Ruth</h1>
+      <form id="searchForm">
+          <label for="chapter">Chapter:</label>
+          <input type="number" id="chapter" name="chapter" max="22" placeholder="Chapter number">
+          <label for="verse">Verse:</label>
+          <input type="number" id="verse" name="verse"  placeholder="Verse number">
+          <button type="submit">Find</button>
+      </form>
+      <div id="result"></div>
   </div>
+  <script src="script.js"></script>
+</body>

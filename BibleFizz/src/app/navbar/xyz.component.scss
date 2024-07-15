@@ -1,14 +1,36 @@
-.nav-item{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: aliceblue;
-    font-size: medium;
-}
- text:hover{
-    color:  rgb(136, 194, 136);
+/* Navbar */
+.navbar {
+   background-color: #f0f0f0; /* Light gray background */
+   padding: 0.5rem 1rem; /* Padding inside the navbar */
+   border-bottom: 1px solid #ccc; /* Gray border at the bottom */
+   border-radius: 30px;
+   margin-top: 20px;
  }
- .navbar-brand{
-    font-size: larger; 
+ 
+ .navbar-brand {
+   color: #333; /* Dark text color */
+   font-size: 1.5rem; /* Larger font size for brand name */
+   font-weight: bold; /* Bold font weight */
+   font-family:cursive;
  }
- image{
-    border-radius: 30px;
+ 
+ .navbar-brand img {
+   margin-right: 0.5rem; /* Space between logo and brand text */
+   border-radius: 50%; /* Rounded logo */
  }
+ 
+ .hover {
+   color: #555; /* Darker text color on hover */
+   text-decoration: none; /* Remove underline on hover */
+ }
+ 
+ .nav-link {
+   color: #555; /* Text color for links */
+   
+ }
+ 
+ .nav-link:hover {
+   color: #333; /* Darker text color on hover */
+   text-decoration: none; /* Remove underline on hover */
+ }
+ 

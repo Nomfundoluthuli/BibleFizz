@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #c5e2ae;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+label, input {
+    margin: 5px;
+}
+
+#result {
+    font-size: 1.1rem;
+    text-align: left;
+}
+h1{
+    font-family: cursive;
+
+}
+button {
+    background-color: #99b484;
+    color: #fff;
+    font-family: 'Your Custom Font', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #abd574;
+  }
+  body {
+    /* Set background image */
+    background-image: url('/assets/1b53c.jpg');
+    /* Center and cover the entire viewport */
+    background-position: center;
+    background-size: cover;
+    /* Fix the background image */
+    background-attachment: fixed;
+    /* Add fallback background color */
+    background-color: #f0f0f0;
+    /* Ensure text is readable */
+    color: #333;
+    /* Reset default margin on body */
+    margin: 0;
+    /* Ensure full height */
+    min-height: 100vh;
+    /* Flex to center content vertically */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
