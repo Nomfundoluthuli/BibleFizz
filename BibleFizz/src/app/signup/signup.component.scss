@@ -132,6 +132,18 @@
       border-radius: 30px;
     }
   
+  .form-input {
+    border: 1px solid #d2d6dc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 12px;
+    width: 100%; /* Full width */
+    margin-bottom: 16px; /* Spacing between inputs */
+    font-size: 1rem;
+    outline: none; /* Remove default outline */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+  
   
   
   

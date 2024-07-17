@@ -10,6 +10,14 @@
     <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="w-full ">
       <div class="mb-1" >
         <div class="relative">
+        <input type="name" id="name" name="name" formControlName="name" placeholder="Name&Surname"
+               class=" border-30  w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+               [ngClass]="{'border-red-500': signupForm.get('email')?.invalid && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched), 'border-green-500': signupForm.get('email')?.valid}">
+        <div *ngIf="signupForm.get('name')?.invalid && (signupForm.get('name')?.dirty || signupForm.get('name')?.touched)" class="text-red-500 text-xs mt-1">
+      
+        </div>
+        <div class="mb-1" >
+        <div class="relative">
         <input type="email" id="email" name="email" formControlName="email" placeholder="Email"
                class=" border-30  w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                [ngClass]="{'border-red-500': signupForm.get('email')?.invalid && (signupForm.get('email')?.dirty || signupForm.get('email')?.touched), 'border-green-500': signupForm.get('email')?.valid}">
@@ -40,7 +48,6 @@
                  class=" font-bold py-3 px-4  focus:outline-none focus:shadow-outline w-full md:w-auto mb-2 md:mb-0"
                  [ngClass]="{'border-red-500': (signupForm.get('confirmPassword')?.invalid || passwordMatchError) && (signupForm.get('confirmPassword')?.dirty || signupForm.get('confirmPassword')?.touched), 'border-green-500': !passwordMatchError && signupForm.get('confirmPassword')?.valid}">
           <span (click)="togglePasswordVisibility('confirmPassword')" class="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer">
-            <i class="fa fa-eye text-red-400 hover:text-gray-600"></i>
           </span>
         </div>
         <div *ngIf="(signupForm.get('confirmPassword')?.invalid || passwordMatchError) && (signupForm.get('confirmPassword')?.dirty || signupForm.get('confirmPassword')?.touched)" class="text-red-500 text-xs mt-1">
@@ -58,7 +65,7 @@
       <a href="#" class="inline-block align-baseline font-bold text-sm text-black hover:text-black mt-4">
         Already registered?
       </a>
-      <a class="inline-block align-baseline font-bold text-sm text-[#F99104] hover:text-[#EF5513] mt-1" routerLink="/login">
+      <a class="mt-1" routerLink="/login">
         Sign In
       </a>
       </div>    

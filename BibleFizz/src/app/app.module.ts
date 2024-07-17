@@ -13,6 +13,7 @@ import { SignupComponent } from './signup/signup.component';
 import { Routes } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { BibleComponent } from './bible/bible/bible.component';
+import { ProfileComponent } from './profile/profile.component';
 // import { AuthserviceComponent } from './service/authservice/authservice.component';
 // import { AuthServiceComponent } from './landing/pages/services/auth.service/auth.service.component';
 // import { GuardsComponent } from './authguards/guards/guards.component';
@@ -30,6 +31,7 @@ import { BibleComponent } from './bible/bible/bible.component';
     SignupComponent,
     WelcomeComponent,
     BibleComponent,
+    ProfileComponent,
 
   ],
   imports: [
