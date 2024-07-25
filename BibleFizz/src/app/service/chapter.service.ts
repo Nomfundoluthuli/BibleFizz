@@ -7,20 +7,21 @@ import { Observable } from 'rxjs';
 })
 export class ChapterService {
   private tokenKey = 'token'; // Key for localStorage
+  private baseUrl = 'https://bible-api.com'; // Base URL
 
-  private apiUrl = 'https://bible-api.com/ruth+1,2,3,4'; // Adjusted URL format
-  
   constructor(private http: HttpClient) { }
 
-  getBible(): Observable<any> {
-    return this.http.get<any>(this.apiUrl);
-  }
-  signup(data: {email: string, password: string, confirmPassword:string}):Observable<any> {
-    return this.http.post(`${this.apiUrl}/register`, data);
+  getVerse(chapter: number, verse: number): Observable<any> {
+    const apiUrl = `${this.baseUrl}/ruth+${chapter}:${verse}`;
+    return this.http.get<any>(apiUrl);
   }
 
-  signin(credentials: {email: string, password: string }):Observable<any> {
-    return this.http.post(`${this.apiUrl}/login`, credentials);
+  signup(data: { email: string, password: string, confirmPassword: string }): Observable<any> {
+    return this.http.post(`${this.baseUrl}/register`, data);
+  }
+
+  signin(credentials: { email: string, password: string }): Observable<any> {
+    return this.http.post(`${this.baseUrl}/login`, credentials);
   }
 
   saveToken(token: string): void {
@@ -39,5 +40,3 @@ export class ChapterService {
     return !!this.getToken();
   }
 }
-
-
