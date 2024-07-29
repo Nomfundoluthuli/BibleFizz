@@ -117,31 +117,39 @@
    .nn{
     position: center;
     display: flex;
-      justify-content: center;
-      align-items: center;
+    justify-content: center;
+    align-items: center;
     
    }
    .logo{
-     
-      align-self: flex-start; /* Aligns the image to the top of the card */
-      width: 20%; /* Ensures the image fills the width of the card */
-      object-fit: cover; /* Maintains aspect ratio and covers the entire card */
-      align-self: center;
-      margin-top: 60px;
-      margin-left: 0px;
-      border-radius: 30px;
-    }
+   
+    align-self: flex-start; /* Aligns the image to the top of the card */
+    width: 40%; /* Ensures the image fills the width of the card */
+    object-fit: cover; /* Maintains aspect ratio and covers the entire card */
+    align-self: center;
+    margin-top: 60px;
+    margin-left: 200px;
+    border-radius: 30px;
+  }
+  input{
+
+    border-radius: 50px;
+    background-color: rgb(243, 243, 243);
+    margin: 15px;
+    margin-left: 200px;
+  }
+    
+.profile-background {
+  background-image: url('/assets/shapes-free-vector.jpg'); /* Adjust path and filename */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh; /* Ensures background covers entire viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
-  .form-input {
-    border: 1px solid #d2d6dc; /* Light gray border */
-    border-radius: 4px; /* Rounded corners */
-    padding: 12px;
-    width: 100%; /* Full width */
-    margin-bottom: 16px; /* Spacing between inputs */
-    font-size: 1rem;
-    outline: none; /* Remove default outline */
-    transition: border-color 0.3s ease; /* Smooth transition for border color */
 }
+
 
   
   

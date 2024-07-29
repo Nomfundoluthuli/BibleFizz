@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ProfileuesrService } from '../service/profileuesr.service';
 
 @Component({
   selector: 'app-profile',
@@ -6,11 +7,28 @@ import { Component } from '@angular/core';
   styleUrls: ['./profile.component.scss']
 })
 
-export class ProfileComponent {
-  username: string = 'Nomfundo.luth';
-  email: string = 'nomfund.luthu@example.com';
-  favoriteVerses: string[] = [
-    'John 3:16 - For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.',
-    'Philippians 4:13 - I can do all this through him who gives me strength.'
-  ];
-}
+export class ProfileComponent implements OnInit {
+userInfo: any = {}; // Initialize userInfo object to store user information
+username: any;
+email: any;
+favoriteVerses: any;
+favourites: any;
+  
+    constructor(private profile: ProfileuesrService) {}
+  
+    ngOnInit(): void {
+      console.log(" profile");
+  
+      // Call ProfileService to fetch user data for the logged-in user
+      this.profile.getUserByLoggedInUserId().subscribe(
+        (data: any) => {
+          this.userInfo = data; // Assign fetched user data to userInfo object
+          console.log(this.userInfo); // Log the retrieved userInfo
+        },
+        (error) => {
+          console.error('Error fetching user information:', error); // Log error if fetching user data fails
+        }
+      );
+    }
+  }
+  

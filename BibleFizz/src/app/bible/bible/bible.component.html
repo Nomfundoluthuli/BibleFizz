@@ -1,22 +1,17 @@
 <app-xyz></app-xyz>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Background Image Example</title>
-  <link rel="stylesheet" href="/assets/Beige and Green Illustrated Floral Quote Desktop Wallpaper.png">
-</head>
-<body>
-  <div class="container">
-      <h1>Ruth</h1>
-      <form id="searchForm">
-          <label for="chapter">Chapter:</label>
-          <input type="number" id="chapter" name="chapter" max="22" placeholder="Chapter number">
-          <label for="verse">Verse:</label>
-          <input type="number" id="verse" name="verse"  placeholder="Verse number">
-          <button type="submit">Find</button>
-          <button type="submit">Favorite</button>
-      </form>
-      <div id="result"></div>
-  </div>
-  <script src="script.js"></script>
-</body>
+<div class="profile-background">
+    <div class="container">
+       <h1>Ruth</h1>
+       <form id="searchForm" (ngSubmit)="findVerse()">
+           <label for="chapter">Chapter:</label>
+           <input type="number" id="chapter" name="chapter" [(ngModel)]="chapter" max="4" placeholder="Chapter number">
+           <label for="verse">Verse:</label>
+           <input type="number" id="verse" name="verse" [(ngModel)]="verse" placeholder="Verse number">
+           <button type="submit">Find</button>
+           <button type="button" (click)="favouriteVerse()">Favourite</button>
+       </form>
+       <div id="result">{{result}}</div>
+   </div>
+ </div>
+ 
+ 

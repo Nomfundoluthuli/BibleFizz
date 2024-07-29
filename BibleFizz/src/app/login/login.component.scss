@@ -134,6 +134,15 @@ h1{
     margin-left: 100px;
     border-radius: 30px;
   }
+  .profile-background {
+    background-image: url('/assets/shapes-free-vector.jpg'); /* Adjust path and filename */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; /* Ensures background covers entire viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 

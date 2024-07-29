@@ -7,6 +7,7 @@ import { SignupComponent } from './signup/signup.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { BibleComponent } from './bible/bible/bible.component';
 import { ProfileComponent } from './profile/profile.component';
+import { FavouriteComponent } from './favourite/favourite.component';
 
 const routes: Routes = [
   {path:'login', component:loginComponent},
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path:"", redirectTo:"landing", pathMatch:"full"},
   {path:'welcome',component:WelcomeComponent},
   {path:'bible',component:BibleComponent},
-  {path:'profile',component:ProfileComponent}
+  {path:'profile',component:ProfileComponent},
+  {path:'favourite',component:FavouriteComponent}
 
 ];
 @NgModule({

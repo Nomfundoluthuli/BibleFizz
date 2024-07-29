@@ -5,6 +5,7 @@
    border-bottom: 1px solid #ccc; /* Gray border at the bottom */
    border-radius: 30px;
    margin-top: 20px;
+ 
  }
  
  .navbar-brand {
@@ -33,4 +34,8 @@
    color: #333; /* Darker text color on hover */
    text-decoration: none; /* Remove underline on hover */
  }
+ li a:hover {
+  background-color: #c4e8a7;
+  border-radius: 30px;
+}
  
