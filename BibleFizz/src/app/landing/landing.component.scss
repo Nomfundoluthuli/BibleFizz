@@ -1,26 +1,37 @@
   .card-img-top {
-    align-self: flex-start; /* Aligns the image to the top of the card */
+    //align-self: flex-start; /* Aligns the image to the top of the card */
     width: 60%; /* Ensures the image fills the width of the card */
-    object-fit: cover; /* Maintains aspect ratio and covers the entire card */
-    align-self: center;
-    margin-top: 40px;
+    //object-fit: cover; /* Maintains aspect ratio and covers the entire card */
+    //padding: 0 35px;
+    //margin: 0 auto;
+    z-index: 100;
    
   }
   
+  
   .card {
     display: flex;
-    flex-direction: column;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
     height: 100%; /* Ensures the card expands to fill its container */
     border: 1px solid #dee2e6; /* Optional: Add a border for better visualization */
     border-radius: 0.25rem; /* Optional: Add rounded corners to the card */
+    width: 100%;
+    margin: auto 0;
+    min-width: 380px;
+    overflow: hidden;
   }
   
   .card-body {
     padding: 1rem; /* Add padding inside the card body */
-    flex: 1; /* Allows the card body to expand to fill remaining space */
+    //flex: 1; /* Allows the card body to expand to fill remaining space */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    //justify-content: space-between;
+    width: 40%;
+    min-width: 340px;
+    height: 20rem;
   }
   
   .card-title {
@@ -29,8 +40,16 @@
     font-family:cursive;
     font-size: xxx-large;
     margin-top: 50px;
+    color: #c4e8a7;
+   
   }  
-  
+  .card-pp{
+    font-size:medium;
+    align-self: center;
+    font-family: sans-serif;
+    flex: 10;
+    margin-left: 40px;
+  }
   .card-text {
     flex: 6; /* Allows the text to take up remaining space in the card body */
     align-self: center;/* Removes default margin for paragraph */
@@ -42,6 +61,18 @@
     align-self: center; /* Aligns the button to the start of the card */
     background-color: #c4e8a7;
     border-radius: 30px;
+    position: relative;        /* equivalent to 'relative' */
+    display: inline-flex;      /* equivalent to 'inline-flex' */
+    align-items: center;       /* equivalent to 'items-center' */
+    text-align: left;          /* equivalent to 'text-left' */
+    margin-bottom: 2rem; 
+    padding-left: 20px;
+    padding-right: 20px;   
+  }
+  .btn-primary1 {
+    background-color:  #c4e8a7; /* Darker shade for hover */
+    color: #f8f8f8;
+    
   }
 
   .card-title{
@@ -52,14 +83,20 @@
   .btn-primary:hover {
     background-color:  #bde983; /* Darker shade for hover */
   }
-
-  .profile-background {
-    background-image: url('/assets/shapes-free-vector.jpg'); /* Adjust path and filename */
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh; /* Ensures background covers entire viewport height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .btn-primary1:hover {
+    background-color:  #bde983; /* Darker shade for hover */
+  }
+ .mr-2{       
+  display: inline-flex;                            
+  margin-inline: 100px;
+  }
+  .circle {
+    position: absolute;
+    left: 0;
+    width: 400px; 
+    height: 300px; 
+    background: #c4e8a7;
+    z-index: 100;
+    top: 0;
+    border-bottom-right-radius: 100%;
 }
-  

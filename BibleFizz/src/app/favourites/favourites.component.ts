@@ -3,8 +3,8 @@ import { FavouriteService } from '../service/favourite.service';
 
 @Component({
   selector: 'app-favourite',
-  templateUrl: './favourite.component.html',
-  styleUrls: ['./favourite.component.scss']
+  templateUrl: './favourites.component.html',
+  styleUrls: ['./favourites.component.scss']
 })
 export class FavouriteComponent {
   favourites: string[] = [];

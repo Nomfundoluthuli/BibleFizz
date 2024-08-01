@@ -7,14 +7,14 @@ import { AppComponent } from './app.component';
 import { LandingComponent } from './landing/landing.component';
 import { XyzComponent } from './navbar/xyz.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
-import { loginComponent } from './login/login.component';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
-import { Router } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { BibleComponent } from './bible/bible/bible.component';
-import { ProfileComponent } from './profile/profile.component';
-import { FavouriteComponent } from './favourite/favourite.component';
+import { LoginComponent } from './login/login.component';
+import { RouterModule } from '@angular/router';
+import { FavouriteComponent } from './favourites/favourites.component';
 
  
 
@@ -23,11 +23,10 @@ import { FavouriteComponent } from './favourite/favourite.component';
     AppComponent,
     LandingComponent,
     XyzComponent,
-    loginComponent,
+    LoginComponent,
     SignupComponent,
     WelcomeComponent,
     BibleComponent,
-    ProfileComponent,
     FavouriteComponent,
 
 
@@ -37,6 +36,7 @@ import { FavouriteComponent } from './favourite/favourite.component';
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    RouterModule,
     FormsModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),

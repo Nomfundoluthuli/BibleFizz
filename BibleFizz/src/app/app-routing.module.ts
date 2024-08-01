@@ -2,22 +2,22 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { LandingComponent } from './landing/landing.component';
-import { loginComponent } from './login/login.component';
+
 import { SignupComponent } from './signup/signup.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { BibleComponent } from './bible/bible/bible.component';
-import { ProfileComponent } from './profile/profile.component';
-import { FavouriteComponent } from './favourite/favourite.component';
+import { FavouriteComponent } from './favourites/favourites.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
-  {path:'login', component:loginComponent},
+  {path:'login', component:LoginComponent},
   {path:'landing',component:LandingComponent},
   {path:'signup',component:SignupComponent},
   {path:"", redirectTo:"landing", pathMatch:"full"},
   {path:'welcome',component:WelcomeComponent},
   {path:'bible',component:BibleComponent},
-  {path:'profile',component:ProfileComponent},
-  {path:'favourite',component:FavouriteComponent}
+  {path:'Favourites',component:FavouriteComponent},
+ 
 
 ];
 @NgModule({

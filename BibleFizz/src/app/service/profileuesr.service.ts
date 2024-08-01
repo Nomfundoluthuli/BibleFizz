@@ -42,18 +42,7 @@ export class ProfileuesrService {
     );
   }
 
-  getAllUsers(): Observable<any[]> {
-    const url = `${this.url}`;
-    console.log('Fetching all users data from:', url);
-    return this.http.get<any[]>(url).pipe(
-      tap(data => console.log('Received all users data:', data)),
-      catchError(error => {
-        console.error('Error fetching all users data:', error);
-        throw error; // Rethrow the error to be handled by the component
-      })
-    );
-  }
-
+  
   getUserById(userId: string): Observable<any> {
     const url = `${this.apiUrl}/users/${userId}`;
     console.log(`Fetching user data for user ID ${userId} from:`, url);

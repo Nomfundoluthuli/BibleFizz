@@ -7,6 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent {
+signup() {
+throw new Error('Method not implemented.');
+}
   constructor(private router:Router){}
 
 login() {

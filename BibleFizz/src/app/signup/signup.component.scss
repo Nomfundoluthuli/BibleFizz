@@ -12,6 +12,7 @@
   
   .fixed {
     position: fixed;
+    align-items: center;
   }
   
   .top-0 {
@@ -47,7 +48,7 @@
   
   .px-4 {
     padding-left: 1rem;
-    padding-right: 1rem;
+    padding-right: 3rem;
   }
   
   .rounded {
@@ -75,16 +76,6 @@
     }
   }
   
-  input{
-  
-    border-radius: 50px;
-    background-color: rgb(243, 243, 243);
-    margin-bottom: 20px;
-    margin-top: 20px;
-    margin-left: 10px;
- 
-  }
-  
   .alll{
     display: flex;
     justify-content: center;
@@ -94,10 +85,14 @@
     border-radius: 50px;
     margin-bottom: 20px;
     margin-top: 20px;
+    position: relative;
+    left: 140px;
     background-color: #c4e8a7;
     padding: 50px;
- 
+   
   }
+  
+  
   .links{
     display: flex;
     justify-content: center;
@@ -109,34 +104,30 @@
 
   h1{
     color: #000;
+    margin-left: -100px;
    }
   
    a{
     color: #c4e8a7;
+    margin-left: 90px;
    }
-   .nn{
-    position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-   }
+   
    .logo{
    
     align-self: flex-start; /* Aligns the image to the top of the card */
-    width: 40%; /* Ensures the image fills the width of the card */
+    width: 30%; /* Ensures the image fills the width of the card */
     object-fit: cover; /* Maintains aspect ratio and covers the entire card */
-    align-self: center;
-    margin-top: 60px;
-    margin-left: 200px;
+    margin-top: 50px;
+    margin-left: 180px;
     border-radius: 30px;
   }
   input{
 
     border-radius: 50px;
     background-color: rgb(243, 243, 243);
-    margin: 15px;
-    margin-left: 200px;
+    margin: 10px;
+    margin-left: 230px;
+    align-items: center;
   }
     
 .profile-background {
@@ -147,7 +138,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 
